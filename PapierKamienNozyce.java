@@ -19,9 +19,16 @@ public class PapierKamienNozyce {
 
         for (int i = 1; i <= 3; i++) {
             System.out.println("podaj liczbe od 1 do 3");
-            System.out.println("1 - paier 2 - kamien 3 - nozyce");
+            System.out.println("1 - papier 2 - kamien 3 - nozyce");
 
             odp = scanner.nextInt();
+
+            if (odp < 1 || odp > 3) {
+                System.out.println("nieeee");
+                break;
+
+            }
+
             if (odp == 1) {
                 System.out.println("Wybrales papier");
             }
@@ -32,7 +39,6 @@ public class PapierKamienNozyce {
 
                 System.out.println("Wybrales nozyce");
             }
-
 
             przec = rnd.nextInt(3) + 1;
             if (przec == 1) {
@@ -46,6 +52,7 @@ public class PapierKamienNozyce {
             }
 
             System.out.println();
+
             if (odp == przec) {
                 lprzeg++;
                 lwygr++;
@@ -70,6 +77,5 @@ public class PapierKamienNozyce {
         }
         else System.out.println("JEST REMIS");
     }
-
 }
 
